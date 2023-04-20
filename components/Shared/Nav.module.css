@@ -1,0 +1,140 @@
+.heroText {
+    opacity: 1;
+    visibility: inherit;
+    /* transform: translate3d(0px, 0.0005px, 0px); */
+  }
+
+  
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: white;
+  }
+
+
+  @media (max-width: 1023px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    .navMenu {
+      position: absolute;
+      left: -100%;
+      top: 96px;
+      gap: 0;
+      display: flex;
+      flex-direction: column;
+      background: #293891;
+      width: 100%;
+      height: 100vh;
+      padding: 0 20px;
+      transition: 0.3s;
+    }
+  
+    .navItem {
+      position: relative;
+      padding: 20px 40px;
+      transition: 0.3s;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 600;
+      width: 100%;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+    .navItem::after {
+      content: "❯";
+      position: absolute;
+      right: 0;
+      padding-right: 30px;
+      color: #19eb96;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+    }
+  
+    .navItem:hover::after {
+      color: #293891;
+    }
+  
+    .navItem:hover {
+      padding: 20px 40px;
+      background: #19eb96;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 600;
+      color: #293891;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+    .navMenu.active {
+      left: 0;
+    }
+  
+    /* Mega Menu */
+    .megaMenu {
+      position: absolute;
+      top: -180px;
+      right: -100%;
+      z-index: 1000;
+      padding: 20px;
+      background: #293891;
+      color: white;
+      width: 100%;
+      height: auto;
+      transition: 0.3s;
+    }
+  
+    .megaMenu.activeMegaMenu {
+      left: 0;
+      transition: 0.3s;
+    }
+    .close {
+      display: none;
+    }
+    .backBtn {
+      display: block;
+      top: 70px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .megaMenuItem{
+      /* position: relative; */
+      /* padding: 20px 0px; */
+      transition: 0.3s;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      width: 100%;
+      margin-bottom: 24px;
+      transition: 0.3s;
+    }
+  
+  }  
